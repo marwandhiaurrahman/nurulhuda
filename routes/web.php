@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login-admin', function () {
+    return view('auth.loginAdmin');
+});
+
 Route::post('/dependent-dropdown', 'DependentDropdownController@store')
     ->name('dependent-dropdown.store');
 
@@ -32,7 +36,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('siswa', 'Admin\SiswaController');
         Route::resource('tahun-ajaran', 'Admin\TahunAjaranController');
         Route::resource('jadwal-penerimaan', 'Admin\JadwalPenerimaanController');
-        Route::resource('arsip', 'Admin\ArsipController' );
-
+        Route::resource('arsip', 'Admin\ArsipController');
     });
 });

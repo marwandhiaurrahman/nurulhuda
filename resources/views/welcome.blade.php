@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    SIMAK Nurul Huda Kertawangunan
                 </div>
 
                 <div class="links">
