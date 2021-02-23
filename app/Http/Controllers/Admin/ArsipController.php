@@ -96,6 +96,9 @@ class ArsipController extends Controller
         ]);
 
         if ($request->file) {
+            if (File::exists(public_path('uploads/' . $arsip->file_path))) {
+                File::delete(public_path('uploads/' . $arsip->file_path));
+            }
             $fileName = $request->file->getClientOriginalName();
             $request->file->move(public_path('uploads'), $fileName);
             $arsip->file_path = $fileName;
