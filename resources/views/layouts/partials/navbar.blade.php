@@ -17,7 +17,8 @@
                     <a class="nav-link" href data-toggle="dropdown">
                         Hari ini :
                         {{ date('Y-m-d') }}
-                        {{-- {{ Form::label('timenow', 'E-Mail Address') }} --}}
+                        <span id="waktu"></span>
+                       
                     </a>
                     {{-- <div ui-include="'../views/blocks/dropdown.new.html'"></div> --}}
                 </li>
@@ -77,3 +78,13 @@
         <!-- / navbar right -->
     </div>
 </div>
+
+<script>
+    window.setTimeout("waktu()", 1000);
+ 
+    function waktu() {
+        var waktu = new Date();
+        setTimeout("waktu()", 1000);
+        document.getElementById("waktu").innerHTML = waktu.getHours()+':'+waktu.getMinutes()+':'+waktu.getSeconds();
+    }
+</script>
