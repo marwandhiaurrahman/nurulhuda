@@ -42,6 +42,7 @@
                                         <th>Jenis</th>
                                         <th>Publisher</th>
                                         <th>Keterangan</th>
+                                        <th>Tanggal</th>
                                         <th>Action</th>
                                 </thead>
                                 <tbody>
@@ -52,6 +53,7 @@
                                     <td>{{ $arsip->jenis }}</td>
                                     <td>{{ $arsip->user->name }}</td>
                                     <td>{{ $arsip->keterangan }}</td>
+                                    <td>{{ $arsip->created_at }}</td>
                                     <td>
                                         <a class="btn btn-sm btn-success" target="_blank"
                                             href="{{ url('uploads/' . $arsip->file_path) }} ">Buka</a>
