@@ -36,12 +36,29 @@
                     <li class="{{ Request::segment(2) === 'arsip' ? 'active' : null }}">
                         <a href="{{route('arsip.index')}}">
                             <span class="nav-icon">
-                                <i class="material-icons">&#xe896;
-                                    <span ui-include="'../assets/images/i_7.svg'"></span>
-                                </i>
+                                <i class="fa fa-caret-down"></i>
                             </span>
                             <span class="nav-text">Kearsipan</span>
                         </a>
+                    </li>
+
+                    <li class="{{ Request::segment(2) === 'pegawai' ? 'active' : null }}">
+                        <a>
+                            <span class="nav-caret">
+                                <i class="fa fa-caret-down"></i>
+                            </span>
+                            <span class="nav-icon">
+                                <i class="fa  fa-suitcase"></i>
+                            </span>
+                            <span class="nav-text">Kepegawaian</span>
+                        </a>
+                        <ul class="nav-sub">
+                            <li class="{{ Request::segment(2) === 'pegawai' ? 'active' : null }}">
+                                <a href="{{route('pegawai.index')}}">
+                                    <span class="nav-text">Data Pegawai</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="{{ Request::segment(2) === 'tahun-ajaran' ? 'active' : null }}">
@@ -51,7 +68,7 @@
                             </span>
                             <span class="nav-icon">
                                 <i class="material-icons">&#xe896;
-                                    <span ui-include="'../assets/images/i_7.svg'"></span>
+                                    {{-- <span ui-include="'../assets/images/i_7.svg'"></span> --}}
                                 </i>
                             </span>
                             <span class="nav-text">Akademik</span>

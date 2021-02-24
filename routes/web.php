@@ -37,5 +37,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('tahun-ajaran', 'Admin\TahunAjaranController');
         Route::resource('jadwal-penerimaan', 'Admin\JadwalPenerimaanController');
         Route::resource('arsip', 'Admin\ArsipController');
+        Route::resource('pegawai', 'Admin\PegawaiController');
     });
 });
