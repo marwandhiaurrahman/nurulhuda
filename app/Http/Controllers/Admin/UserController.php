@@ -33,11 +33,11 @@ class UserController extends Controller
         $user = User::find($id);
 
         $input = $request->all();
-        if ($request->password == null) {
-            $input['password'] = Hash::make($input['password']);
-        } else {
-            $input['password'] = $user->password;
-        }
+        // if ($request->password == null) {
+        //     $input['password'] = Hash::make($input['password']);
+        // } else {
+        //     $input['password'] = $user->password;
+        // }
 
         $user->update($input);
 
