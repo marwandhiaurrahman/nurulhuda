@@ -21,6 +21,10 @@ Route::get('/login-admin', function () {
     return view('auth.loginAdmin');
 });
 
+Route::get('/profile', function () {
+    return view('admin.profile');
+});
+
 Route::post('/dependent-dropdown', 'DependentDropdownController@store')
     ->name('dependent-dropdown.store');
 
