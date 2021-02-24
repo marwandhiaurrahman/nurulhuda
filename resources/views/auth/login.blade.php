@@ -56,12 +56,13 @@
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div class="md-form-group float-label">
-                                    <input type="text" name='username' class="md-input has-value" ng-model="user.username" required="">
+                                    <input type="text" name='username' class="md-input has-value"
+                                        ng-model="user.username" required="">
                                     <label>Username</label>
                                 </div>
                                 <div class="md-form-group float-label">
-                                    <input type="password" name='password' class="md-input has-value" ng-model="user.password"
-                                        required="">
+                                    <input type="password" name='password' class="md-input has-value"
+                                        ng-model="user.password" required="">
                                     <label>Password</label>
                                 </div>
                                 <button type="submit" class="btn primary btn-block p-x-md">Sign in</button>
