@@ -18,7 +18,7 @@
                         Hari ini :
                         {{ date('Y-m-d') }}
                         <span id="waktu"></span>
-                       
+
                     </a>
                     {{-- <div ui-include="'../views/blocks/dropdown.new.html'"></div> --}}
                 </li>
@@ -45,7 +45,7 @@
                         <span>Inbox</span>
                         <span class="label warn m-l-xs">3</span>
                     </a>
-                    <a href="{{ url('profile') }}" class="dropdown-item" ui-sref="app.page.profile">
+                    <a href="{{ route('profile',Auth::user()->id) }}" class="dropdown-item" ui-sref="app.page.profile">
                         <span>Profile</span>
                     </a>
                     <a class="dropdown-item" ui-sref="app.page.setting">
@@ -81,7 +81,7 @@
 
 <script>
     window.setTimeout("waktu()", 1000);
- 
+
     function waktu() {
         var waktu = new Date();
         setTimeout("waktu()", 1000);

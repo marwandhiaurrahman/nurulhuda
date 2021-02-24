@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,6 @@ Route::get('/login-admin', function () {
     return view('auth.loginAdmin');
 });
 
-Route::get('/profile', function () {
-    return view('admin.profile');
-});
 
 Route::post('/dependent-dropdown', 'DependentDropdownController@store')
     ->name('dependent-dropdown.store');
@@ -33,6 +31,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/profile','Admin\UserController@profile')->name('profile');
+    Route::patch('/updateprofile/{id}','Admin\UserController@profileupdate')->name('profileupdate');
+    // Route::post('updateprofile/{id}', );
+
+
     Route::prefix('admin')->group(function () {
         Route::get('/', 'HomeController@adminHome')->name('admin.dashboard')->middleware('is_admin');
         Route::resource('roles', 'Admin\RoleController');
