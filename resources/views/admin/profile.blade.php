@@ -41,6 +41,15 @@
                         @csrf
                         <div class="box-body">
                             <div class="form-group row">
+                                <label class="col-sm-3 form-control-label text-bold">Foto</label>
+                                <div class="col-sm-6">
+                                  
+                                  <label for="profile_image"></label>
+                                  <img id="preview_img" src="{{ asset('assets/images/profile.png') }}" class="mb-3" width="150" height="150"/>
+                                  <input type="file" name="profile_image" id="profile_image" onchange="loadPreview(this);" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-sm-3 form-control-label text-bold">Nama Lengkap</label>
                                 <div class="col-sm-6">
                                     {!! Form::text('name', Auth::user()->name, array('placeholder' => 'Masukan Nama
