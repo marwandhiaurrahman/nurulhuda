@@ -45,7 +45,7 @@
                         <span>Inbox</span>
                         <span class="label warn m-l-xs">3</span>
                     </a>
-                    <a class="dropdown-item" ui-sref="app.page.profile">
+                    <a href="{{ url('profile') }}" class="dropdown-item" ui-sref="app.page.profile">
                         <span>Profile</span>
                     </a>
                     <a class="dropdown-item" ui-sref="app.page.setting">
