@@ -8,6 +8,9 @@
 <script src="{{asset('libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js')}}"></script>
 <script src="{{asset('libs/jquery/PACE/pace.min.js')}}"></script>
 
+{{-- material design --}}
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
 <script src="{{asset('scripts/config.lazyload.js')}}"></script>
 
 <script src="{{asset('scripts/palette.js')}}"></script>

@@ -1,79 +1,3 @@
-{{-- @extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-<div class="card-body">
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <div class="form-group row">
-            <label for="username" class="col-md-4 col-form-label text-md-right">Username Or Email</label>
-
-            <div class="col-md-6">
-                <input id="username" type="username" class="form-control @error('username') is-invalid @enderror"
-                    name="username" value="{{ old('username') }}" required autofocus>
-                @error('username')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-            <div class="col-md-6">
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                    name="password" required autocomplete="current-password">
-
-                @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-md-6 offset-md-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                        {{ old('remember') ? 'checked' : '' }}>
-
-                    <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group row mb-0">
-            <div class="col-md-8 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('Login') }}
-                </button>
-
-                @if (Route::has('password.request'))
-                <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
-                </a>
-                @endif
-            </div>
-        </div>
-    </form>
-</div>
-</div>
-</div>
-</div>
-</div>
-@endsection --}}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-8 mt-xl-5 pt-xl-5 text-center">
-                    <img src="{{url('assets/images/logo_all_lembaga.png')}}" class="apps" style="width: 380px;">
+                    <img src="{{asset('assets/images/logo_all_lembaga.png')}}" class="apps" style="width: 380px;">
                     <h3 style="font-weight: bold; font-size:28pt; padding:10px; color: #fff;">
                         Ahlan Wa Sahlan Peserta Didik<br>
                         <font style="color: #169b48"> Yayasan Nurul Huda Kertawangunan</font>
@@ -123,7 +47,7 @@
                         </div>
                         <div class="p-a-md box-color r box-shadow-z1 text-color shadow-side">
                             <div class="text-center">
-                                <img src="{{url('assets/images/logo_ponpesnurulhuda.png')}}" class="apps">
+                                <img src="{{asset('assets/images/logo_ponpesnurulhuda.png')}}" class="apps">
                             </div>
                             <div class="m-b text-sm m-t">
                                 Login Peserta Didik
@@ -132,12 +56,13 @@
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div class="md-form-group float-label">
-                                    <input type="text" name='username' class="md-input has-value" ng-model="user.username" required="">
+                                    <input type="text" name='username' class="md-input has-value"
+                                        ng-model="user.username" required="">
                                     <label>Username</label>
                                 </div>
                                 <div class="md-form-group float-label">
-                                    <input type="password" name='password' class="md-input has-value" ng-model="user.password"
-                                        required="">
+                                    <input type="password" name='password' class="md-input has-value"
+                                        ng-model="user.password" required="">
                                     <label>Password</label>
                                 </div>
                                 <button type="submit" class="btn primary btn-block p-x-md">Sign in</button>

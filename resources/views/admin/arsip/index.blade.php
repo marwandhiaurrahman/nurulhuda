@@ -49,21 +49,21 @@
                                     @foreach ($arsips as $key => $arsip)
                                     <tr>
                                         <td>{{ ++$i }}</td>
-                                    <td>{{ $arsip->name }}</td>
-                                    <td>{{ $arsip->jenis }}</td>
-                                    <td>{{ $arsip->user->name }}</td>
-                                    <td>{{ $arsip->keterangan }}</td>
-                                    <td>{{ $arsip->created_at }}</td>
-                                    <td>
-                                        <a class="btn btn-sm btn-success" target="_blank"
-                                            href="{{ url('uploads/' . $arsip->file_path) }} ">Buka</a>
-                                        <a class="btn btn-sm btn-primary"
-                                            href="{{ route('arsip.edit',$arsip->id) }}">Edit</a>
-                                        {!! Form::open(['method' => 'DELETE','route' => ['arsip.destroy',
-                                        $arsip->id],'style'=>'display:inline']) !!}
-                                        {!! Form::submit('Delete', ['class' => 'btn btn-sm btn-danger']) !!}
-                                        {!! Form::close() !!}
-                                    </td>
+                                        <td>{{ $arsip->name }}</td>
+                                        <td>{{ $arsip->jenis }}</td>
+                                        <td>{{ $arsip->user->name }}</td>
+                                        <td>{{ $arsip->keterangan }}</td>
+                                        <td>{{ $arsip->created_at }}</td>
+                                        <td>
+                                            <a class="btn btn-sm btn-success" target="_blank"
+                                                href="{{ asset('storage/'.$arsip->file_path) }} ">Buka</a>
+                                            <a class="btn btn-sm btn-primary"
+                                                href="{{ route('arsip.edit',$arsip->id) }}">Edit</a>
+                                            {!! Form::open(['method' => 'DELETE','route' => ['arsip.destroy',
+                                            $arsip->id],'style'=>'display:inline']) !!}
+                                            {!! Form::submit('Delete', ['class' => 'btn btn-sm btn-danger']) !!}
+                                            {!! Form::close() !!}
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
