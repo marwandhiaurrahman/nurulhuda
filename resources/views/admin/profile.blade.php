@@ -36,7 +36,17 @@
               <div class="box-body">
                 <form ui-jp="parsley" action="{{ url('calonsiswa.store') }}" method="POST">
                     @csrf
-                        @if (!Auth::user()->is_admin)    
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 form-control-label text-bold">Foto</label>
+                      <div class="col-sm-6">
+                        
+                        <label for="profile_image"></label>
+                        <img id="preview_img" src="https://www.w3adda.com/wp-content/uploads/2019/09/No_Image-128.png" class="" width="200" height="150"/>
+                        <input type="file" name="profile_image" id="profile_image" onchange="loadPreview(this);" class="form-control">
+                      </div>
+                    </div>
+                        @if (!Auth::user()->is_admin)
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label text-bold">No Pendaftaran</label>
                           <div class="col-sm-6">
@@ -99,4 +109,21 @@
 </div>
 </div>
 </div>
+<script>
+  function loadPreview(input, id) {
+    id = id || '#preview_img';
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+ 
+        reader.onload = function (e) {
+            $(id)
+                    .attr('src', e.target.result)
+                    .width(200)
+                    .height(150);
+        };
+ 
+        reader.readAsDataURL(input.files[0]);
+    }
+ }
+</script>
 @endsection
