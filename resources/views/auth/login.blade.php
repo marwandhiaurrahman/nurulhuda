@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-8 mt-xl-5 pt-xl-5 text-center">
-                    <img src="{{url('assets/images/logo_all_lembaga.png')}}" class="apps" style="width: 380px;">
+                    <img src="{{asset('assets/images/logo_all_lembaga.png')}}" class="apps" style="width: 380px;">
                     <h3 style="font-weight: bold; font-size:28pt; padding:10px; color: #fff;">
                         Ahlan Wa Sahlan Peserta Didik<br>
                         <font style="color: #169b48"> Yayasan Nurul Huda Kertawangunan</font>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="p-a-md box-color r box-shadow-z1 text-color shadow-side">
                             <div class="text-center">
-                                <img src="{{url('assets/images/logo_ponpesnurulhuda.png')}}" class="apps">
+                                <img src="{{asset('assets/images/logo_ponpesnurulhuda.png')}}" class="apps">
                             </div>
                             <div class="m-b text-sm m-t">
                                 Login Peserta Didik
