@@ -48,7 +48,7 @@ class ArsipController extends Controller
 
         if ($request->file) {
             $fileName = $request->file->getClientOriginalName();
-            $request->file->move(public_path('uploads'), $fileName);
+            $request->file->move(public_path('storage'), $fileName);
             $arsip->file_path = $fileName;
         }
 
@@ -96,11 +96,11 @@ class ArsipController extends Controller
         ]);
 
         if ($request->file) {
-            if (File::exists(public_path('uploads/' . $arsip->file_path))) {
-                File::delete(public_path('uploads/' . $arsip->file_path));
+            if (File::exists(public_path('storage/' . $arsip->file_path))) {
+                File::delete(public_path('storage/' . $arsip->file_path));
             }
             $fileName = $request->file->getClientOriginalName();
-            $request->file->move(public_path('uploads'), $fileName);
+            $request->file->move(public_path('storage'), $fileName);
             $arsip->file_path = $fileName;
         }
 
@@ -118,8 +118,8 @@ class ArsipController extends Controller
      */
     public function destroy(Arsip $arsip)
     {
-        if (File::exists(public_path('uploads/' . $arsip->file_path))) {
-            File::delete(public_path('uploads/' . $arsip->file_path));
+        if (File::exists(public_path('storage/' . $arsip->file_path))) {
+            File::delete(public_path('storage/' . $arsip->file_path));
         } else {
             dd('File dodes not exists.');
         }
