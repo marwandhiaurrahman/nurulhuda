@@ -3,8 +3,8 @@
         <div class="navbar navbar-md no-radius">
             <!-- brand -->
             <a class="navbar-brand">
-                <div ui-include="'../assets/images/logo.svg'"></div>
-                <img src="../assets/images/logo.png" alt="." class="hide">
+                <div ui-include="'{{asset('/assets/images/logo.svg')}}'"></div>
+                <img src="{{asset('/assets/images/logo.png')}}" alt="." class="hide">
                 <span class="hidden-folded inline">NURUL HUDA</span>
             </a>
             <!-- / brand -->
@@ -23,7 +23,6 @@
                         <a href="{{route('admin.dashboard')}}">
                             <span class="nav-icon">
                                 <i class="material-icons">&#xe3fc;
-                                    <span ui-include="'../assets/images/i_0.svg'"></span>
                                 </i>
                             </span>
                             <span class="nav-text">Dashboard</span>
