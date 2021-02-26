@@ -29,7 +29,7 @@
 <script src="{{asset('scripts/ui-form.js')}}"></script>
 <script src="{{asset('scripts/ui-nav.js')}}"></script>
 <script src="{{asset('scripts/ui-screenfull.js')}}"></script>
-{{-- sdfsa --}}
+{{-- comment --}}
 
 <script src="{{asset('scripts/ui-scroll-to.js')}}"></script>
 <script src="{{asset('scripts/ui-toggle-class.js')}}"></script>
