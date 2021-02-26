@@ -1,5 +1,13 @@
 <!-- jQuery -->
-<script src="{{asset('libs/jquery/jquery/dist/jquery.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+{{-- <script src="{{asset('libs/jquery/jquery/dist/jquery.js')}}"></script> --}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
+
 <!-- Bootstrap -->
 <script src="{{asset('libs/jquery/tether/dist/js/tether.min.js')}}"></script>
 <script src="{{asset('libs/jquery/bootstrap/dist/js/bootstrap.js')}}"></script>
@@ -47,7 +55,7 @@
        });
     });
 
-    $(".nomor").on("keypress keyup blur",function (event) {    
+    $(".nomor").on("keypress keyup blur",function (event) {
            $(this).val($(this).val().replace(/[^\d].+/, ""));
             if ((event.which < 48 || event.which > 57)) {
                 event.preventDefault();
@@ -68,18 +76,22 @@
     });
 });
 
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+
 function loadPreview(input, id) {
     id = id || '#preview_img';
     if (input.files && input.files[0]) {
         var reader = new FileReader();
- 
+
         reader.onload = function (e) {
             $(id)
                     .attr('src', e.target.result)
                     .width(200)
                     .height(150);
         };
- 
+
         reader.readAsDataURL(input.files[0]);
     }
  }

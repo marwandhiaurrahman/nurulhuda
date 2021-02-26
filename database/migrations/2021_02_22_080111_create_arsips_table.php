@@ -16,7 +16,6 @@ class CreateArsipsTable extends Migration
         Schema::create('arsips', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('jenis');
             $table->string('file_path')->nullable();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->text('keterangan');

@@ -30,7 +30,7 @@
             </div>
             @endif
             <div class="table-responsive">
-                <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div id="example" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                     <div class="row">
                         <div class="col-sm-12">
                             <table ui-jp="dataTable" class="table table-striped b-t b-b dataTable no-footer"

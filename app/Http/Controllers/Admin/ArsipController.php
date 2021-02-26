@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\File;
 
 class ArsipController extends Controller
 {
+
+
+
     public function index(Request $request)
     {
         $arsips = Arsip::orderBy('id', 'DESC')->paginate(5);
@@ -38,7 +41,6 @@ class ArsipController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'jenis' => 'required',
             'keterangan' => 'required',
         ]);
 
