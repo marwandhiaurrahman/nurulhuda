@@ -3,8 +3,8 @@
         <div class="navbar navbar-md no-radius">
             <!-- brand -->
             <a class="navbar-brand">
-                <div ui-include="{{asset('/assets/images/logo.svg')}}"></div>
-                <img src="{{asset('/assets/images/logo.png')}}" alt="." class="hide">
+                <div ui-include="'{{asset('/assets/images/logo.svg')}}'"></div>
+                <img src="{{asset('/assets/images/logo.svg')}}" alt="." class="hide">
                 <span class="hidden-folded inline">NURUL HUDA</span>
             </a>
             <!-- / brand -->

@@ -39,14 +39,6 @@
                                 !!}
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                {!! Form::label('jenis', 'Jenis Arsip :') !!}
-                                {!! Form::text('jenis', null, array('placeholder' => 'Nama Jenis Arsip Data','class'
-                                => 'form-control'))
-                                !!}
-                            </div>
-                        </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">

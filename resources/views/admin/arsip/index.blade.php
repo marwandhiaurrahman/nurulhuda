@@ -39,7 +39,6 @@
                                     <tr role="row">
                                         <th>No</th>
                                         <th>Name</th>
-                                        <th>Jenis</th>
                                         <th>Publisher</th>
                                         <th>Keterangan</th>
                                         <th>Tanggal</th>
@@ -50,7 +49,6 @@
                                     <tr>
                                         <td>{{ ++$i }}</td>
                                         <td>{{ $arsip->name }}</td>
-                                        <td>{{ $arsip->jenis }}</td>
                                         <td>{{ $arsip->user->name }}</td>
                                         <td>{{ $arsip->keterangan }}</td>
                                         <td>{{ $arsip->created_at }}</td>
