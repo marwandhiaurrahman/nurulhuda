@@ -77,7 +77,7 @@
 });
 
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#tabledata1').DataTable();
 } );
 
 function loadPreview(input, id) {
