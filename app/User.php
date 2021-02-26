@@ -44,6 +44,11 @@ class User extends Authenticatable
         return $this->hasOne('App\Siswa');
     }
 
+    public function pegawai()
+    {
+        return $this->hasOne(Pegawai::class);
+    }
+
     public function arsip()
     {
         return $this->hasMany(Arsip::class);

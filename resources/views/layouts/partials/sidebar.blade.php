@@ -36,7 +36,7 @@
                     <li class="{{ Request::segment(2) === 'arsip' ? 'active' : null }}">
                         <a href="{{route('arsip.index')}}">
                             <span class="nav-icon">
-                                <i class="fa fa-caret-down"></i>
+                                <i class="fa fa-file"></i>
                             </span>
                             <span class="nav-text">Kearsipan</span>
                         </a>
@@ -48,7 +48,7 @@
                                 <i class="fa fa-caret-down"></i>
                             </span>
                             <span class="nav-icon">
-                                <i class="fa  fa-suitcase"></i>
+                                <i class="fa fa-briefcase"></i>
                             </span>
                             <span class="nav-text">Kepegawaian</span>
                         </a>
@@ -67,9 +67,8 @@
                                 <i class="fa fa-caret-down"></i>
                             </span>
                             <span class="nav-icon">
-                                <i class="material-icons">&#xe896;
-                                    {{-- <span ui-include="'../assets/images/i_7.svg'"></span> --}}
-                                </i>
+                                <i class="fas fa-school"></i>
+
                             </span>
                             <span class="nav-text">Akademik</span>
                         </a>
@@ -88,9 +87,7 @@
                                 <i class="fa fa-caret-down"></i>
                             </span>
                             <span class="nav-icon">
-                                <i class="material-icons">&#xe896;
-                                    <span ui-include="'../assets/images/i_7.svg'"></span>
-                                </i>
+                                <i class="fa fa-users"></i>
                             </span>
                             <span class="nav-text">Manage PPDB</span>
                         </a>
@@ -110,9 +107,7 @@
                                 <i class="fa fa-caret-down"></i>
                             </span>
                             <span class="nav-icon">
-                                <i class="material-icons">&#xe896;
-                                    <span ui-include="'../assets/images/i_7.svg'"></span>
-                                </i>
+                                <i class="fa fa-users"></i>
                             </span>
                             <span class="nav-text">Siswa</span>
                         </a>
@@ -126,28 +121,6 @@
                     </li>
                     @endcan
 
-                    @can('calon-siswa-list')
-                    <li class="{{ Request::segment(2) === 'calonsiswa' ? 'active' : null }}">
-                        <a>
-                            <span class="nav-caret">
-                                <i class="fa fa-caret-down"></i>
-                            </span>
-                            <span class="nav-icon">
-                                <i class="material-icons">&#xe896;
-                                    <span ui-include="'../assets/images/i_7.svg'"></span>
-                                </i>
-                            </span>
-                            <span class="nav-text">Calon Siswa</span>
-                        </a>
-                        <ul class="nav-sub">
-                            <li class="{{ Request::segment(2) === 'calonsiswa' ? 'active' : null }}">
-                                <a href="{{ route('calonsiswa.index') }}">
-                                    <span class="nav-text">Data Calon Siswa</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    @endcan
                     <li class="nav-header hidden-folded">
                         <small class="text-muted">Setting</small>
                     </li>
@@ -159,9 +132,7 @@
                                 <i class="fa fa-caret-down"></i>
                             </span>
                             <span class="nav-icon">
-                                <i class="material-icons">&#xe896;
-                                    <span ui-include="'../assets/images/i_7.svg'"></span>
-                                </i>
+                                <i class="fa fa-id-card"></i>
                             </span>
                             <span class="nav-text">User & Role</span>
                         </a>

@@ -16,7 +16,8 @@ class CreatePegawaisTable extends Migration
         Schema::create('pegawais', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('alamat');
+            $table->string('alamat')->nullable();
+            $table->string('ktp')->nullable();
             $table->timestamps();
         });
     }

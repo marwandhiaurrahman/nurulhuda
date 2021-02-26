@@ -35,7 +35,7 @@
             <li class="nav-item dropdown">
                 <a href="" class="nav-link dropdown-toggle text-ellipsis" data-toggle="dropdown">
                     <span class="avatar w-32">
-                        <img src="../assets/images/a0.jpg" alt="...">
+                        <img src="{{asset('assets/images/a0.jpg')}}" alt="...">
                         <i class="on b-white bottom"></i>
                     </span>
                     <span class="hidden-sm-down _500">{{Auth::user()->name}}</span>

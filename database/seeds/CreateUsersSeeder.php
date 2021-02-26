@@ -23,6 +23,14 @@ class CreateUsersSeeder extends Seeder
                 'is_admin' => '0',
                 'password' => bcrypt('qweqwe'),
             ],
+            [
+                'name' => 'Pegawai',
+                'telp' => '213123',
+                'username' => 'pegawai',
+                'email' => 'pegawai@gmail.com',
+                'is_admin' => '1',
+                'password' => bcrypt('qweqwe'),
+            ],
         ];
 
         foreach ($user as $key => $value) {
@@ -39,6 +47,8 @@ class CreateUsersSeeder extends Seeder
         ]);
 
         Role::create(['name' => 'Siswa']);
+        Role::create(['name' => 'Pegawai']);
+
 
         $role = Role::create(['name' => 'Admin']);
 
